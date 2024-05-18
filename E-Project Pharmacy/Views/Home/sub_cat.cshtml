@@ -1,0 +1,73 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<E_Project_Pharmacy.Models.Sub_Categare>;
+@if (!string.IsNullOrEmpty(ViewBag.add))
+{
+    <script>
+        alert(@ViewBag.add)
+    </script>
+}
+
+<div class="ltn__product-area ltn__product-gutter pt-115 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2 text-center">
+                    <h1 class="section-title">Our Products</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+            <!-- ltn__product-item -->
+            @foreach (var value in Model)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="ltn__product-item ltn__product-item-3 text-left">
+                        <div class="product-img">
+                            <a href=""><img src="~/@Url.Content(value.sub_c_img)" alt="#"></a>
+
+                            <div class="product-hover-action">
+                                <ul>
+
+                                    <li>
+                                            
+                                            <form asp-action="add_to_cart" asp-controller="Home" method="post">
+                                                <input type="hidden" name="id" value="@value.sub_c_id.ToString()" />
+                                                <input type="hidden" name="name" value="@value.sub_c_name.ToString()" />
+                                                <input type="hidden" name="des" value="@value.sub_c_description.ToString()" />
+                                                <input type="hidden" name="price" value="@value.sub_c_price.ToString()" />
+                                            <button type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                        </form>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-ratting">
+                                <ul>
+                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                    <li><a href="#"><i class="far fa-star"></i></a></li>
+                                </ul>
+                            </div>
+                            <h2 class="product-title">@value.sub_c_name</h2>
+                            <p>@value.sub_c_description</p>
+                            <div class="product-price">
+                                <span>$@value.sub_c_price</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- ltn__product-item -->
+
+        </div>
+    </div>
+</div>

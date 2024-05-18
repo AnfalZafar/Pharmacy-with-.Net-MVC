@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "Dash";
+}
+
+@model E_Project_Pharmacy.Models.Doctor;
+
+<form asp-action="doctor_edit" asp-controller="Dashboard" class="depart_form w-50" method="post" enctype="multipart/form-data">
+    <div class="w-100 d-flex justify-content-end pr-3 pt-3">
+        <i class="croos fa-sharp fa-solid fa-xmark"></i>
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="hidden" asp-for="doctor_id"/>
+        <input asp-for="doctor_name" asp-controller="Home" type="text" class="form-control" aria-describedby="emailHelp"
+               placeholder="Enter Doctor Name">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputPassword1">Description</label>
+        <input asp-for="doctor_position" asp-controller="Home" type="text" class="form-control" aria-describedby="emailHelp"
+               placeholder="Enter Doctor Position">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleFormControlFile1">Choose Img</label>
+        <input type="file" asp-for="doctor_img" asp-controller="Home" class="form-control-file">
+    </div>
+    <div class="btnss w-100 d-flex justify-content-center mb-3 mt-3">
+        <button class="btn btn-primary ">Submit</button>
+    </div>
+</form>

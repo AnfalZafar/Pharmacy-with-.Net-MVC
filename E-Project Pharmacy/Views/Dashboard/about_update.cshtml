@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "Dash";
+}
+@model E_Project_Pharmacy.Models.About;
+
+<form asp-action="about_edit" asp-controller="Dashboard" class="depart_form w-50" method="post" enctype="multipart/form-data">
+    <div class="w-100 d-flex justify-content-end pr-3 pt-3">
+        <i class="croos fa-sharp fa-solid fa-xmark"></i>
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="hidden" asp-for="about_id"/>
+        <input asp-for="about_title" type="text" class="form-control" aria-describedby="emailHelp"
+               placeholder="Enter Departments Name">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputPassword1">Description</label>
+        <textarea asp-for="about_description" asp-controller="Home" id="" class="w-100 h-25"></textarea>
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleFormControlFile1">cheak_one</label>
+        <input type="text" asp-for="cheak_one" asp-controller="Home" class="form-control-file">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleFormControlFile1">cheak_two</label>
+        <input type="text" asp-for="cheak_two" asp-controller="Home" class="form-control-file">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleFormControlFile1">cheak_two</label>
+        <input type="text" asp-for="cheak_three" asp-controller="Home" class="form-control-file">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleFormControlFile1">Choose Img</label>
+        <input type="file" asp-for="about_img" asp-controller="Home" class="form-control-file">
+    </div>
+    <div class="btnss w-100 d-flex justify-content-center mb-3 mt-3">
+        <button class="btn btn-primary ">Submit</button>
+    </div>
+</form>
+

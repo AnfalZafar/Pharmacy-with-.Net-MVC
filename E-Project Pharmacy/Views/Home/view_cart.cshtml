@@ -1,0 +1,108 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="content mt-5 mb-5">
+
+
+    <!-- Table Start -->
+    @if(add_list.cart != null){
+        <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                    @foreach (Add_to_cart item in add_list.cart)
+                    {
+                        int gettotal = Int32.Parse(item.add_qty.ToString()) * Int32.Parse(item.add_price.ToString());
+                        <tr>
+                            <td>
+                                <span class="" id="@item.add_id.ToString()">@item.add_id.ToString()</span>
+                            </td>
+                            
+                            <td>
+
+                                <div class="ms-3">
+                                    <p class="fw-bold mb-1" id="name_@item.add_id.ToString()">@item.add_name.ToString()</p>
+
+                                </div>
+                            </td>
+                            <td>
+                                <input type="number" id="qty_@item.add_id.ToString()" value="@item.add_qty.ToString()" />
+
+                            </td>
+                            <td>
+                                <span class="" id="price_@item.add_id.ToString()">@item.add_price</span>
+                            </td>
+                            <td>
+                                <span class="" id="tprice_@item.add_id.ToString()">@gettotal.ToString()</span>
+                            </td>
+
+                            <td>
+                                <a asp-route-id="" asp-action="" asp-controller="Dashboard" class="btn btn-danger btn-sm btn-rounded">
+                                    Delete
+                                </a>
+                            </td>
+                            <script>
+
+                                $("#qty_@item.add_id.ToString()").bind('keyup mouseup', function () {
+
+                                var code = '@item.add_id.ToString()';
+                                var getprice = $("#price_@item.add_id.ToString()").text();
+                                var getqtt = $("#qty_@item.add_id.ToString()").val();
+
+                                var total = Number(getprice) * Number(getqtt);
+                                $("#tprice_@item.add_id.ToString()").text(total);
+                                var value = { "price": getprice, "qty": getqtt, "code": code };
+                                $.ajax({
+
+                                type: "post",
+                                url: '@Url.Action("updatecart" , "Home")',
+                                data: value,
+                                Success: function (data) {
+                                updateGrandTotal();
+                                },
+                                Error: function () {
+                                alert("Data not update");
+                                }
+                                })
+
+                                });
+
+                            </script>
+
+
+
+                        </tr>
+                    }
+                <tr class="p-5">
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a asp-action="order" asp-controller="Home" class="btn btn-secondary">Cheak Out</a></td>
+
+                </tr>
+
+        </tbody>
+        </table>
+    }
+    else
+    {
+        <h1>Your Cart Is Empty</h1>
+    }
+
+   
+
+</div>

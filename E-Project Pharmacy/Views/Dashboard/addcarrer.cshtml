@@ -1,0 +1,83 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "Dash";
+}
+@model E_Project_Pharmacy.Models.Carrer;
+
+<form asp-action="addpro" asp-controller="Dashboard" class="depart_form w-50" method="post" enctype="multipart/form-data">
+    <div class="w-100 d-flex justify-content-end pr-3 pt-3">
+        <i class="croos fa-sharp fa-solid fa-xmark"></i>
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputEmail1">Name</label>
+        <input asp-for="carrer_name" asp-controller="Home" type="text" class="form-control" aria-describedby="emailHelp"
+               placeholder="Enter Departments Name">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputPassword1">Description</label>
+        <textarea asp-for="carrer_description" asp-controller="Home" id="" class="w-100 h-25"></textarea>
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleFormControlFile1">Location</label>
+        <input type="text" asp-for="carrer_location" asp-controller="Home" class="form-control-file">
+    </div>
+
+    <div class="btnss w-100 d-flex justify-content-center mb-3 mt-3">
+        <button class="btn btn-primary ">Submit</button>
+    </div>
+</form>
+
+
+
+<div class="content">
+
+
+    <!-- Table Start -->
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Location</th>
+                <th>Delete</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var value in ViewBag.carrer)
+            {
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                         
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">@value.carrer_name</p>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="fw-normal mb-1">@value.carrer_description</p>
+
+                    </td>
+                    <td>
+                        <span class="">@value.carrer_location</span>
+                    </td>
+                   
+                    <td>
+                        <a asp-route-id="@value.carrer_id" asp-action="carrer_delete" asp-controller="Dashboard" class="btn btn-danger btn-sm btn-rounded">
+                            Delete
+                        </a>
+                    </td>
+                   
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+
+
+</div>

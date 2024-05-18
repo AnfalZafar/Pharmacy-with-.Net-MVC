@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	Layout = "Login";
+}
+@model E_Project_Pharmacy.Models.Users;
+
+<p>@ViewBag.error</p>
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+	<script>
+		alert("@ViewBag.Message");
+	</script>
+}
+@if (!string.IsNullOrEmpty(ViewBag.errors))
+{
+	<script>
+
+		alert("@ViewBag.errors");
+	</script>
+}
+
+<div class="main">
+<input type="checkbox" id="chk" aria-hidden="true">
+
+<div class="signup">
+		<form asp-action="signup" asp-controller="LoginController1">
+		<label for="chk" aria-hidden="true">Sign up</label>
+			<input asp-for="user_name" type="text" placeholder="User name" required="">
+			<input asp-for="user_email" type="email" placeholder="Email" required="">
+			<input asp-for="user_password" type="password" placeholder="Password" required="">
+			<input asp-for="user_phone" type="password" placeholder="Phone" required="">
+
+			<button>Sign up</button>
+	</form>
+</div>
+
+<div class="login">
+		<form asp-action="login" asp-controller="LoginController1">
+		<label for="chk" aria-hidden="true">Login</label>
+		<input asp-for="user_email" type="email" placeholder="Email" required="">
+			<input asp-for="user_password" type="password" placeholder="Password" required="">
+		<button>Login</button>
+	</form>
+</div>
+</div>

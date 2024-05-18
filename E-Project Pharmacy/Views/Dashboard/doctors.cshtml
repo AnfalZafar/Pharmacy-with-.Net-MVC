@@ -1,0 +1,86 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "Dash";
+}
+
+@model E_Project_Pharmacy.Models.Doctor;
+
+<form asp-action="doctor_add" asp-controller="Dashboard" class="depart_form w-50" method="post" enctype="multipart/form-data">
+    <div class="w-100 d-flex justify-content-end pr-3 pt-3">
+        <i class="croos fa-sharp fa-solid fa-xmark"></i>
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputEmail1">Name</label>
+        <input asp-for="doctor_name" asp-controller="Home" type="text" class="form-control" aria-describedby="emailHelp"
+               placeholder="Enter Doctor Name">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputPassword1">Description</label>
+        <input asp-for="doctor_position" asp-controller="Home" type="text" class="form-control" aria-describedby="emailHelp"
+               placeholder="Enter Doctor Position">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleFormControlFile1">Choose Img</label>
+        <input type="file" asp-for="doctor_img" asp-controller="Home" class="form-control-file">
+    </div>
+    <div class="btnss w-100 d-flex justify-content-center mb-3 mt-3">
+        <button class="btn btn-primary ">Submit</button>
+    </div>
+</form>
+
+
+<div class="content">
+
+
+    <!-- Table Start -->
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var value in ViewBag.doc)
+            {
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="~/@Url.Content(value.doctor_img)"
+                                 alt=""
+                                 style="width: 45px; height: 45px"
+                                 class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">@value.doctor_name</p>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="fw-normal mb-1">@value.doctor_position</p>
+
+                    </td>
+                    <td>
+                        <a asp-route-id="@value.doctor_id" asp-action="doctor_delete" asp-controller="Dashboard" class="btn btn-danger btn-sm btn-rounded">
+                            Delete
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-route-id="@value.doctor_id" asp-action="doctor_update" asp-controller="Dashboard" class="btn btn-primary btn-sm btn-rounded">
+                            Edit
+                        </a>
+                    </td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+
+
+</div>
+

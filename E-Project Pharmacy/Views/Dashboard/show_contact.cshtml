@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "Dash";
+}
+@model E_Project_Pharmacy.Models.Contact;
+
+<div class="content">
+
+
+    <!-- Table Start -->
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Addrees</th>
+                <th>Message</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var value in ViewBag.cont)
+            {
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                         
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">@value.contact_name</p>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="fw-normal mb-1">@value.contact_email</p>
+
+                    </td>
+                    <td>
+                        <span class="">@value.contact_phone</span>
+                    </td>
+                    <td>
+                        <span class="">@value.contact_address</span>
+                    </td>
+                    <td>
+                        <span class="">@value.contact_message</span>
+                    </td>
+                    <td>
+                        <a asp-route-id="@value.contact_id" asp-action="contact_delete" asp-controller="Dashboard" class="btn btn-danger btn-sm btn-rounded">
+                            Delete
+                        </a>
+                    </td>
+                    
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+
+
+</div>

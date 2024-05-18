@@ -1,0 +1,106 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "Dash";
+}
+@model E_Project_Pharmacy.Models.Sub_Categare;
+
+
+<form asp-action="sub_product_add" asp-controller="Dashboard" class="depart_form w-50" method="post" enctype="multipart/form-data">
+    <div class="w-100 d-flex justify-content-end pr-3 pt-3">
+        <i class="croos fa-sharp fa-solid fa-xmark"></i>
+    </div>
+    <div class="form-groupt w-75 m-auto pt-4">
+        <select class="form-select" asp-for="cat_id" asp-items="ViewBag.categare" aria-label="Default select example">
+            <option selected>Select Categare</option>
+        </select>
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputEmail1">Name</label>
+        <input asp-for="sub_c_name" asp-controller="Dashboard" type="text" class="form-control" aria-describedby="emailHelp"
+               placeholder="Enter Departments Name">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputPassword1">Description</label>
+        <textarea asp-for="sub_c_description" asp-controller="Dashboard" id="" class="w-100 h-25"></textarea>
+
+    </div>
+     <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleInputEmail1">Price</label>
+        <input asp-for="sub_c_price" asp-controller="Dashboard" type="text" class="form-control" aria-describedby="emailHelp"
+               placeholder="Enter Departments Name">
+    </div>
+    <div class="form-group w-75 m-auto pt-4">
+        <label for="exampleFormControlFile1">Choose Img</label>
+        <input type="file" asp-for="sub_c_img" asp-controller="Dashboard" class="form-control-file">
+    </div>
+    <div class="btnss w-100 d-flex justify-content-center mb-3 mt-3">
+        <button class="btn btn-primary ">Submit</button>
+    </div>
+</form>
+
+
+<div class="content">
+
+
+    <!-- Table Start -->
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>price</th>
+                <th>Cat_id</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var value in ViewBag.subpro)
+            {
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="~/@Url.Content(value.sub_c_img)"
+                                 alt=""
+                                 style="width: 45px; height: 45px"
+                                 class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">@value.sub_c_name</p>
+
+                            </div>
+                           
+                        </div>
+                    </td>
+                    <td>
+                        <p class="fw-normal mb-1">@value.sub_c_description</p>
+
+                    </td>
+                    <td>
+                        <p class="fw-normal mb-1">@value.sub_c_price</p>
+
+                    </td>
+                    <td>
+                        <p class="fw-normal mb-1">@value.cat_id</p>
+
+                    </td>
+                    <td>
+                        <a asp-route-id="@value.sub_c_id" asp-action="sub_c_delete" asp-controller="Dashboard" class="btn btn-danger btn-sm btn-rounded">
+                            Delete
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-route-id="@value.sub_c_id" asp-action="sub_c_update" asp-controller="Dashboard" class="btn btn-primary btn-sm btn-rounded">
+                            Edit
+                        </a>
+                    </td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+
+
+</div>
