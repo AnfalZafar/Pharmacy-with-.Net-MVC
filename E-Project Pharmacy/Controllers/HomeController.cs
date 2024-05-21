@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualBasic;
 using System.Data;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.Reflection.Metadata.Ecma335;
 
 namespace E_Project_Pharmacy.Controllers
@@ -60,6 +61,7 @@ namespace E_Project_Pharmacy.Controllers
 
         public IActionResult account_detail()
         {
+            ViewBag.order = dbcontext.orders.ToList();
             return View();
         }
         [Authorize]
@@ -196,12 +198,13 @@ namespace E_Project_Pharmacy.Controllers
         }
         [Authorize]
 
-        public IActionResult view_cart()
+        public IActionResult view_cart(string message)
         {
             foreach(var item in add_list.cart)
             {
                 ViewBag.cartid = item.user_id;
-            } 
+            }
+            ViewBag.Message = message;
             return View();
         }
         [Authorize]
@@ -223,18 +226,32 @@ namespace E_Project_Pharmacy.Controllers
             return Content("price==" + price + "qty==" + qty + "code==" + code);
         }
         [Authorize]
-
-        public IActionResult order(Add_to_cart e)
+        [HttpPost]
+        public IActionResult order()
         {
-            var cart = add_list.cart.ToList();
-            orders order = new orders()
-            {
-                o_price = e.add_price,
-                user_id = e.user_id[0]
-            };
+          
+            var price = Request.Form["total"];
+            int id = Int32.Parse(ClassSessionUser.UserId);
+            string date = DateTime.Now.ToString("MMddhhmmss");
+           
+           if(ClassSessionUser.UserId == id.ToString()) { 
+                orders order = new orders()
+                {
+                    o_price = price,
+                    user_id = id,
+                    DateTime = date
+
+                };
+            
             dbcontext.Add(order);
             dbcontext.SaveChanges();
+            }
+            else
+            {
+                return RedirectToAction("view_cart", new { message = "Login Your Self" });
+            }
             return RedirectToAction(nameof(view_cart));
+
         }
         [Authorize]
 

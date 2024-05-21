@@ -567,6 +567,12 @@ namespace E_Project_Pharmacy.Controllers
             return File(resume.r_resume, "application/pdf");
         }
 
+        public IActionResult show_order()
+        {
+            ViewBag.order = dbcontext.orders.ToList();
+            return View();
+        }
+
 
     }
 }

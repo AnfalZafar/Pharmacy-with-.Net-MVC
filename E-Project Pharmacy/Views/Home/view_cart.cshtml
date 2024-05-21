@@ -3,7 +3,12 @@
 *@
 @{
 }
-
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <script>
+        alert("@ViewBag.Message");
+    </script>
+}
 <div class="content mt-5 mb-5">
 
 
@@ -28,7 +33,7 @@
                         int gettotal = Int32.Parse(item.add_qty.ToString()) * Int32.Parse(item.add_price.ToString());
                         <tr>
                             <td>
-                                <span class="" id="@item.add_id.ToString()">@item.add_id.ToString()</span>
+                                <span class="" name="id" id="@item.add_id.ToString()">@item.add_id.ToString()</span>
                             </td>
                             
                             <td>
@@ -39,7 +44,7 @@
                                 </div>
                             </td>
                             <td>
-                                <input type="number" id="qty_@item.add_id.ToString()" value="@item.add_qty.ToString()" />
+                                <input type="number" name="qtt" id="qty_@item.add_id.ToString()" value="@item.add_qty.ToString()" />
 
                             </td>
                             <td>
@@ -61,27 +66,31 @@
                         </tr>
                     }
                     }
-
+                    <form method="post" asp-action="order" asp-controller="Home">
                 <tr>
                     <td colspan="5" style="text-align: right;font-weight:bold">Grand Total:</td>
                     <td><span id="grand_total"></span></td>
+                    <input type="hidden" name="total" id="dataval" value="" />
                 </tr>
                 <tr class="p-5">
 
                     <td colspan="5"></td>
                    
-                    <td><a asp-action="order" asp-controller="Home" class="btn btn-secondary">Cheak Out</a></td>
+                    <td><button type="submit" class="btn btn-secondary">Cheak Out</button></td>
 
                 </tr>
-               
+                </form>
                 <script>
                     $(document).ready(function () {
                         function updateGrandTotal() {
                             var grandTotal = 0;
+                            var dataval = 0;
                             $('[id^=tprice_]').each(function () {
                                 grandTotal += Number($(this).text());
+
                             });
                             $("#grand_total").text(grandTotal);
+                            $("#dataval").val(grandTotal);
                         }
 
                         $('[id^=qty_]').bind('keyup mouseup', function () {

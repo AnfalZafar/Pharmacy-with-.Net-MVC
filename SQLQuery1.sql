@@ -1,6 +1,6 @@
 use pharmacy;
-select * from Users;
-drop table user_resume;
+select * from orders;
+drop table orders;
 delete from user_resume Where c_id = 0;
 create table Role(
 Id int primary key identity(1,1),
@@ -100,6 +100,6 @@ create table orders(
 
 o_id int primary key identity(1,1),
 o_price varchar(255),
-DateTime DateTime,
+DateTime varchar(255),
 user_id int
 );

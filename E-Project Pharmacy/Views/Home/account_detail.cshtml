@@ -3,7 +3,7 @@
 *@
 @{
 }
-
+@model E_Project_Pharmacy.Models.orders;
 <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image " data-bs-bg="img/bg/14.jpg">
     <div class="container">
         <div class="row">
@@ -51,26 +51,37 @@
                                                         <tr>
                                                             <th>Order</th>
                                                             <th>Date</th>
-                                                            <th>Status</th>
                                                             <th>Total</th>
-                                                            <th>Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td>Jun 22, 2019</td>
-                                                            <td>Pending</td>
-                                                            <td>$3000</td>
-                                                            <td><a href="cart.html">View</a></td>
-                                                        </tr>
-                                                        
+                                                        @foreach (var value in ViewBag.order){
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="d-flex align-items-center">
+
+                                                                        <div class="ms-3">
+                                                                            <p class="fw-bold mb-1">@value.user_id</p>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-normal mb-1">@value.o_price</p>
+
+                                                                </td>
+                                                                <td>
+                                                                    <span class="">@value.DateTime</span>
+                                                                </td>
+
+                                                            </tr>
+                                                       
+                                                        }
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </div>
                                     </div>
-
 
                                     <div class="tab-pane fade active show" id="liton_tab_1_5">
                                         <div class="ltn__myaccount-tab-content-inner">
