@@ -30,6 +30,11 @@ namespace E_Project_Pharmacy.Controllers
         {
             return View(Categary_Model);
         }
+        public IActionResult user()
+        {
+            ViewBag.user = dbcontext.Users.ToList();
+            return View();
+        }
 
         public IActionResult addroll()
         {
@@ -52,6 +57,7 @@ namespace E_Project_Pharmacy.Controllers
 
             return View();
         }
+       
         public IActionResult adminadd(Users e , IFormFile user_img)
         {
             e.id = 1;

@@ -42,12 +42,13 @@ namespace E_Project_Pharmacy.Controllers
         }
         [Authorize]
 
-        public IActionResult sub_cat(int? id)
+        public IActionResult sub_cat(int id)
         {
 
             var subCategories = dbcontext.Sub_Categare.Where(sc => sc.cat_id == id).ToList();
 
             return View(subCategories);
+           
         }
         [Authorize]
 
@@ -164,7 +165,9 @@ namespace E_Project_Pharmacy.Controllers
             string id = Request.Form["id"].ToString();
             string price = Request.Form["price"].ToString();
             string des = Request.Form["des"].ToString();
-            string url = Request.Form["url"].ToString();
+            int url = int.Parse(Request.Form["url"]);
+            string user_id = ClassSessionUser.UserId;
+
 
             string qty = "1";
             bool cheakitem = false;
@@ -185,10 +188,11 @@ namespace E_Project_Pharmacy.Controllers
                     add_name = name,
                     add_qty = qty,
                     add_price = price,
+                    user_id = user_id
                 };
                 add_list.cart.Add(cart);
             }
-            return RedirectToAction(nameof(sub_cat) , new { url});
+            return RedirectToAction("sub_cat","Home", new {id = url } );
         }
         [Authorize]
 
