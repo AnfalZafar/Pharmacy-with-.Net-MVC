@@ -34,11 +34,12 @@
 
                                     <li>
                                             
-                                            <form asp-action="add_to_cart" asp-controller="Home" method="post">
+                                            <form asp-action="sub_add_to_cart" asp-controller="Home" method="post">
                                                 <input type="hidden" name="id" value="@value.sub_c_id.ToString()" />
                                                 <input type="hidden" name="name" value="@value.sub_c_name.ToString()" />
                                                 <input type="hidden" name="des" value="@value.sub_c_description.ToString()" />
                                                 <input type="hidden" name="price" value="@value.sub_c_price.ToString()" />
+                                                <input type="hidden" name="url" value="@value.cat_id.ToString()" />
                                             <button type="submit"><i class="fas fa-shopping-cart"></i></button>
                                         </form>
                                     </li>

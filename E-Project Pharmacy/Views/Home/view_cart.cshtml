@@ -8,7 +8,7 @@
 
 
     <!-- Table Start -->
-    @if(add_list.cart != null){
+    @if(add_list.cart.Count.ToString() != "0"){
         <table class="table align-middle mb-0 bg-white">
             <thead class="bg-light">
                 <tr>
@@ -24,6 +24,7 @@
                
                     @foreach (Add_to_cart item in add_list.cart)
                     {
+                        @if(item.user_id == ClassSessionUser.UserId){
                         int gettotal = Int32.Parse(item.add_qty.ToString()) * Int32.Parse(item.add_price.ToString());
                         <tr>
                             <td>
@@ -49,58 +50,78 @@
                             </td>
 
                             <td>
-                                <a asp-route-id="" asp-action="" asp-controller="Dashboard" class="btn btn-danger btn-sm btn-rounded">
+                                <a asp-route-id="@item.add_id.ToString()" asp-action="order_delete" asp-controller="Home" class="btn btn-danger btn-sm btn-rounded">
                                     Delete
                                 </a>
                             </td>
-                            <script>
-
-                                $("#qty_@item.add_id.ToString()").bind('keyup mouseup', function () {
-
-                                var code = '@item.add_id.ToString()';
-                                var getprice = $("#price_@item.add_id.ToString()").text();
-                                var getqtt = $("#qty_@item.add_id.ToString()").val();
-
-                                var total = Number(getprice) * Number(getqtt);
-                                $("#tprice_@item.add_id.ToString()").text(total);
-                                var value = { "price": getprice, "qty": getqtt, "code": code };
-                                $.ajax({
-
-                                type: "post",
-                                url: '@Url.Action("updatecart" , "Home")',
-                                data: value,
-                                Success: function (data) {
-                                updateGrandTotal();
-                                },
-                                Error: function () {
-                                alert("Data not update");
-                                }
-                                })
-
-                                });
-
-                            </script>
+                           
 
 
 
                         </tr>
                     }
+                    }
+
+                <tr>
+                    <td colspan="5" style="text-align: right;font-weight:bold">Grand Total:</td>
+                    <td><span id="grand_total"></span></td>
+                </tr>
                 <tr class="p-5">
 
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="5"></td>
+                   
                     <td><a asp-action="order" asp-controller="Home" class="btn btn-secondary">Cheak Out</a></td>
 
                 </tr>
+               
+                <script>
+                    $(document).ready(function () {
+                        function updateGrandTotal() {
+                            var grandTotal = 0;
+                            $('[id^=tprice_]').each(function () {
+                                grandTotal += Number($(this).text());
+                            });
+                            $("#grand_total").text(grandTotal);
+                        }
+
+                        $('[id^=qty_]').bind('keyup mouseup', function () {
+                            var id = $(this).attr('id').split('_')[1];
+                            var getprice = $("#price_" + id).text();
+                            var getqtt = $(this).val();
+                            var total = Number(getprice) * Number(getqtt);
+                            $("#tprice_" + id).text(total);
+
+                            var value = { "price": getprice, "qty": getqtt, "code": id };
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Action("updatecart", "Home")',
+                                data: value,
+                                success: function (data) {
+                                    updateGrandTotal();
+                                },
+                                error: function () {
+                                    alert("Data not updated");
+                                }
+                            });
+                        });
+
+                        // Initial calculation of grand total on page load
+                        updateGrandTotal();
+                    });
+                </script>
+
+
+
 
         </tbody>
         </table>
     }
     else
     {
-        <h1>Your Cart Is Empty</h1>
+        <div class="container w-100 d-flex justify-content-center">
+        <h1 class="m-auto">Your Cart Is Empty</h1>
+        </div>
+
     }
 
    

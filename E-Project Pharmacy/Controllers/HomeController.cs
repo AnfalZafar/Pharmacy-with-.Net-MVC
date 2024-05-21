@@ -49,22 +49,27 @@ namespace E_Project_Pharmacy.Controllers
 
             return View(subCategories);
         }
+        [Authorize]
 
         public IActionResult about()
         {
             return View(Categary_Model);
         }
+        [Authorize]
 
         public IActionResult account_detail()
         {
             return View();
         }
+        [Authorize]
 
         public IActionResult Contact(String errors) {
             ViewBag.error = errors;
             return View();
         
         }
+        [Authorize]
+
         public IActionResult Contact_us(Contact e)
         {
             if (!string.IsNullOrEmpty(ClassSessionUser.UserId))
@@ -87,12 +92,15 @@ namespace E_Project_Pharmacy.Controllers
             }
 
         }
+        [Authorize]
 
         public IActionResult Quote(string errors)
         {
             ViewBag.error = errors; 
             return View();
         }
+        [Authorize]
+
         public IActionResult Quote_us(Quote e)
         {
             if (!string.IsNullOrEmpty(ClassSessionUser.UserId))
@@ -100,12 +108,16 @@ namespace E_Project_Pharmacy.Controllers
                 dbcontext.Add(e);
                 dbcontext.SaveChanges();
                 return RedirectToAction(nameof(Quote));
+
             }
             else
             {
                 return RedirectToAction("Quote", new { errors = "Please Login Your Self" });
             }
+
         }
+        [Authorize]
+
         [HttpPost]
         public IActionResult add_to_cart()
         {
@@ -113,6 +125,7 @@ namespace E_Project_Pharmacy.Controllers
             string id = Request.Form["id"].ToString();
             string price = Request.Form["price"].ToString();
             string des = Request.Form["des"].ToString();
+            string user_id = ClassSessionUser.UserId;
 
             string qty = "1";
             bool cheakitem = false;
@@ -122,7 +135,44 @@ namespace E_Project_Pharmacy.Controllers
                 {
                     add_list.cart[i].add_qty = qty;
                     cheakitem = true;
-                    ViewBag.add = add_list.cart[i].add_qty + 1+ "is add";
+                    break;
+                }
+            }
+            if(cheakitem == false)
+            {
+                Add_to_cart cart = new Add_to_cart()
+                {
+                    add_id = id,
+                    add_description = des,
+                    add_name = name,
+                    add_qty = qty,
+                    add_price = price,
+                    user_id = user_id
+                };
+                ViewBag.cartid = cart.user_id;
+                add_list.cart.Add(cart);
+            }
+
+            return RedirectToAction(nameof(product));
+        }
+        [Authorize]
+
+        [HttpPost]
+         public IActionResult sub_add_to_cart()
+        {
+            string name = Request.Form["name"].ToString();
+            string id = Request.Form["id"].ToString();
+            string price = Request.Form["price"].ToString();
+            string des = Request.Form["des"].ToString();
+            string url = Request.Form["url"].ToString();
+
+            string qty = "1";
+            bool cheakitem = false;
+            for(var i= 0 ; i < add_list.cart.Count; i++){
+                if (add_list.cart[i].add_id.ToString().Equals(id))
+                {
+                    add_list.cart[i].add_qty = qty;
+                    cheakitem = true;
                     break;
                 }
             }
@@ -138,13 +188,20 @@ namespace E_Project_Pharmacy.Controllers
                 };
                 add_list.cart.Add(cart);
             }
-            return RedirectToAction(nameof(product));
+            return RedirectToAction(nameof(sub_cat) , new { url});
         }
+        [Authorize]
 
         public IActionResult view_cart()
         {
+            foreach(var item in add_list.cart)
+            {
+                ViewBag.cartid = item.user_id;
+            } 
             return View();
         }
+        [Authorize]
+
         [HttpPost]
         public IActionResult updatecart()
         {
@@ -161,25 +218,54 @@ namespace E_Project_Pharmacy.Controllers
 
             return Content("price==" + price + "qty==" + qty + "code==" + code);
         }
+        [Authorize]
 
-        public IActionResult order(orders e)
+        public IActionResult order(Add_to_cart e)
         {
             var cart = add_list.cart.ToList();
-            
+            orders order = new orders()
+            {
+                o_price = e.add_price,
+                user_id = e.user_id[0]
+            };
+            dbcontext.Add(order);
+            dbcontext.SaveChanges();
             return RedirectToAction(nameof(view_cart));
         }
-       
+        [Authorize]
+
+        public IActionResult order_delete(string id)
+        {
+            for (int i = 0; i < add_list.cart.Count; i++)
+            {
+                if (add_list.cart[i].add_id.ToString().Equals(id))
+                {
+                    add_list.cart.RemoveAt(i);
+                    break;
+                }
+
+            }
+            return RedirectToAction(nameof(view_cart));
+
+        }
+
+
+        [Authorize]
 
         public IActionResult carrer()
         {
             ViewBag.carrer = dbcontext.Carrer.ToList();
             return View();
         }
+        [Authorize]
+
         public IActionResult carrer_form(int? id)
         {
             ViewBag.id = id;
             return View();
         }
+        [Authorize]
+
         public IActionResult form_submit(user_resume a, IFormFile r_resume)
         {
             if (r_resume != null && r_resume.Length > 0 && r_resume.Length < 30000000)

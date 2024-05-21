@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Noman Traders\\Desktop\\Pharmacy\\E-Project Pharmacy\\E-Project Pharmacy.csproj": {}
+    "C:\\Users\\Noman Traders\\Desktop\\Pharmacy-with-.Net-MVC\\E-Project Pharmacy\\E-Project Pharmacy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Noman Traders\\Desktop\\Pharmacy\\E-Project Pharmacy\\E-Project Pharmacy.csproj": {
+    "C:\\Users\\Noman Traders\\Desktop\\Pharmacy-with-.Net-MVC\\E-Project Pharmacy\\E-Project Pharmacy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Noman Traders\\Desktop\\Pharmacy\\E-Project Pharmacy\\E-Project Pharmacy.csproj",
+        "projectUniqueName": "C:\\Users\\Noman Traders\\Desktop\\Pharmacy-with-.Net-MVC\\E-Project Pharmacy\\E-Project Pharmacy.csproj",
         "projectName": "E-Project Pharmacy",
-        "projectPath": "C:\\Users\\Noman Traders\\Desktop\\Pharmacy\\E-Project Pharmacy\\E-Project Pharmacy.csproj",
+        "projectPath": "C:\\Users\\Noman Traders\\Desktop\\Pharmacy-with-.Net-MVC\\E-Project Pharmacy\\E-Project Pharmacy.csproj",
         "packagesPath": "C:\\Users\\Noman Traders\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Noman Traders\\Desktop\\Pharmacy\\E-Project Pharmacy\\obj\\",
+        "outputPath": "C:\\Users\\Noman Traders\\Desktop\\Pharmacy-with-.Net-MVC\\E-Project Pharmacy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Noman Traders\\AppData\\Roaming\\NuGet\\NuGet.Config",

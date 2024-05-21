@@ -7,6 +7,7 @@
         public string add_description { get; set; }
         public string add_qty { get; set; }
         public string add_price { get; set; }
+        public string user_id { get; set; }
 
     }
 

@@ -2,6 +2,7 @@ using E_Project_Pharmacy.Database;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,7 +31,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(option =>
 {
-    option.IdleTimeout = TimeSpan.FromMinutes(1800);
+    option.IdleTimeout = TimeSpan.FromSeconds(1800);
     option.Cookie.HttpOnly = true;
     option.Cookie.IsEssential = true;
 }

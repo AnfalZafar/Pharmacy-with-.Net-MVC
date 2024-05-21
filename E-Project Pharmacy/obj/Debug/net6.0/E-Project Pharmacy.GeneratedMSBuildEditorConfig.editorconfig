@@ -9,167 +9,167 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = E_Project_Pharmacy
 build_property.RootNamespace = E_Project_Pharmacy
-build_property.ProjectDir = C:\Users\Noman Traders\Desktop\Pharmacy\E-Project Pharmacy\
+build_property.ProjectDir = C:\Users\Noman Traders\Desktop\Pharmacy-with-.Net-MVC\E-Project Pharmacy\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Noman Traders\Desktop\Pharmacy\E-Project Pharmacy
+build_property.MSBuildProjectDirectory = C:\Users\Noman Traders\Desktop\Pharmacy-with-.Net-MVC\E-Project Pharmacy
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/about.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/about.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGFib3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/about_update.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/about_update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGFib3V0X3VwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/addcarrer.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/addcarrer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGFkZGNhcnJlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/addroll.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/addroll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGFkZHJvbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/admin.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/choose.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/choose.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGNob29zZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/choose_update.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/choose_update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGNob29zZV91cGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/c_update.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/c_update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGNfdXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/doctors.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/doctors.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGRvY3RvcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/doctor_update.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/doctor_update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGRvY3Rvcl91cGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/Index.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/Product.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/Product.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/showusers.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/showusers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXHNob3d1c2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/show_contact.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/show_contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXHNob3dfY29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/show_quote.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/show_quote.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXHNob3dfcXVvdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/show_resume.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/show_resume.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXHNob3dfcmVzdW1lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/Show_resume_detail.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/Show_resume_detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFNob3dfcmVzdW1lX2RldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/Show_user_submision.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/Show_user_submision.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFNob3dfdXNlcl9zdWJtaXNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/sub_c_update.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/sub_c_update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXHN1Yl9jX3VwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Dashboard/sub_pro.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Dashboard/sub_pro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXHN1Yl9wcm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/about.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/about.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/account_detail.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/account_detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhY2NvdW50X2RldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/carrer.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/carrer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjYXJyZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/carrer_form.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/carrer_form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjYXJyZXJfZm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/Contact.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/Index.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/Privacy.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/product.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/product.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/Quote.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/Quote.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdW90ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/sub_cat.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/sub_cat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzdWJfY2F0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Home/view_cart.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Home/view_cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx2aWV3X2NhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/LoginController1/Index.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/LoginController1/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5Db250cm9sbGVyMVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Shared/Dash.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Shared/Dash.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERhc2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Shared/Error.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Shared/Login.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Shared/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/_ViewImports.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/_ViewStart.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Noman Traders/Desktop/Pharmacy/E-Project Pharmacy/Views/Shared/_Layout.cshtml]
+[C:/Users/Noman Traders/Desktop/Pharmacy-with-.Net-MVC/E-Project Pharmacy/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2zij1fxgoo

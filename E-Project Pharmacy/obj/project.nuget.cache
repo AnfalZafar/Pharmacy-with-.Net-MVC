@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bESoo8TUCYZ4LEk1mGFAiBEO4kcJg/pZRy4IJYNp2ex3+iJm6zen9QXKH1Q/Nz3pnUpRrlkEdmzjltWO4j30NQ==",
+  "dgSpecHash": "xJ4wgw9jMy3hKAwT+6kg0m5CvV2dUhumq1QATj9i6TyooCz2TnGe1RrDOOiPlz/ABuOxUc+DbSAkzCo60mTi2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Noman Traders\\Desktop\\Pharmacy\\E-Project Pharmacy\\E-Project Pharmacy.csproj",
+  "projectFilePath": "C:\\Users\\Noman Traders\\Desktop\\Pharmacy-with-.Net-MVC\\E-Project Pharmacy\\E-Project Pharmacy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Noman Traders\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Noman Traders\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

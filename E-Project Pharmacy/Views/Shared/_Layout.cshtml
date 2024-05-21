@@ -174,7 +174,14 @@
                                             <a asp-action="view_cart" asp-controller="Home" >
                                                 <span class="mini-cart-icon">
                                                     <i class="fa-solid fa-cart-shopping"></i>
-                                                    <sup>@add_list.cart.Count.ToString()</sup>
+
+                                                    @if (@ViewBag.cartid == ClassSessionUser.UserId)
+                                                        {
+                                                            <sup>@add_list.cart.Count.ToString()</sup>
+
+
+                                                        }
+                                                    
                                                 </span>
                                                 <h6><span>Your Cart</span></h6>
                                             </a>
