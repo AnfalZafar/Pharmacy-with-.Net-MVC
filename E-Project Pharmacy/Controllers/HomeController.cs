@@ -250,7 +250,7 @@ namespace E_Project_Pharmacy.Controllers
             {
                 return RedirectToAction("view_cart", new { message = "Login Your Self" });
             }
-            return RedirectToAction(nameof(view_cart));
+            return RedirectToAction(nameof(Index));
 
         }
         [Authorize]
